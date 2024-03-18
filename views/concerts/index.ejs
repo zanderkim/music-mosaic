@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<table id="concert-list">
+    <thead>
+        <tr>
+            <th> Artist </th>
+            <th> Tour </th>
+            <th> Venue </th>
+            <th> Location </th>
+            <th> Date </th>
+            <th> Concert Type </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% concerts.forEach(function(c) { %>
+            <tr>
+                <td> <%= c.artist %> </td>
+                <td> <%= c.tour %></td>
+                <td> <%= c.venue %></td>
+                <td> <%= c.location %></td>
+                <td> <%= c.date %></td>
+                <td> <%= c.concertType %></td>
+                <td> <a href="/concerts/<%= c._id %>">details</a></td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>
