@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ukiyo Sound</title>
+    <title>Music Mosaic</title>
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
     <nav>
-        <img src="/images/camera.svg">
         <a href="/concerts" <%- title === 'All Concerts' ? 'class="active"' : '' %>>all concerts</a>
+        <a href="../about">about</a>
         <% if (user) { %>
           <a href="/concerts/new"	<%- title === ' Add Concert' ? 'class="active"' : '' %>>
                add music experience </a>
           <a href=" /calendar"> concert calendar </a>
-          <a href="/about">about</a>
           <a href="/logout"> log out </a>
         <% } else { %>
           <a href="/auth/google" class="login">login&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

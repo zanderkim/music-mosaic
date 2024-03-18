@@ -1,7 +1,16 @@
 const Concert = require('../models/concert');
 
 module.exports = {
+    delete: deleteReview,
     create
+};
+
+async function deleteReview(req, res) {
+    const concert = await Concert.findOne({ 'reviews._id': req.params.id, 'reviews.user':req.user._id });
+    if (!concert) return res.redirect('/concerts');
+    concert.reviews.remove(req.params.id);
+        await concert.save();
+    res.redirect(`/concerts/${concert._id}`);
 }
 
 async function create(req, res) {

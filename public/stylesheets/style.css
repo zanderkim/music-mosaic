@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -97,4 +97,8 @@ nav > a.active {
 .rating-list {
   display: inline-block;
   list-style: none;
+}
+
+#welcome-page {
+  background-color: yellow;
 }

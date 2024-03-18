@@ -48,9 +48,7 @@ const concertSchema = new Schema({
         type: Date,
         required: true
     }, 
-    concertTour: {type: Boolean, default: false },
-    speakEasy: {type: Boolean, deault: false },
-    specialEvent: {type: Boolean, deault: false },
+    concertType: ['Concert', 'Festival', 'Speakeasy', 'DJ', 'Special Event'],
     reviews: [reviewSchema]
 
 }, { timestamps: true

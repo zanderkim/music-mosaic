@@ -13,8 +13,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var concertsRouter = require('./routes/concerts');
 var reviewsRouter = require('./routes/reviews');
-var aboutRouter = require('./routes/about');
-
+// var aboutRouter = require('./routes/about');
 
 var app = express();
 
@@ -45,10 +44,12 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/concerts', concertsRouter);
-// app.use('/about', aboutRouter);
 app.use('/', reviewsRouter);
+app.get('/about', (req, res) => {
+  res.render('concerts/about');
+ });
 
-
+// app.use('/about', aboutRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
