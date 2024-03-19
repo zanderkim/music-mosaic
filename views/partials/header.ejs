@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Mosaic</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <nav>
         <a href="/concerts" <%- title === 'All Concerts' ? 'class="active"' : '' %>>all concerts</a>
-        <a href="../about">about</a>
+        <a href="/about">about</a>
         <% if (user) { %>
           <a href="/concerts/new"	<%- title === ' Add Concert' ? 'class="active"' : '' %>>
                add music experience </a>

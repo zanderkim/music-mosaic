@@ -1,18 +1,12 @@
 <%- include('../partials/header') %>
 
-<section id="show-page"?
-    <div> Artist: </div>
-    <div> <%= concert.artist %> </div>
-    <div> Tour: </div>
-    <div> <%= concert.tour %> </div>
-    <div> Venue: </div>
-    <div> <%= concert.venue %> </div>
-    <div> Location: </div>
-    <div> <%= concert.location %> </div>
-    <div> Venue: </div>
-    <div> <%= concert.date %> </div>
-    <div> Type: </div>
-    <div> <%= concert.concertType %> </div>
+<section id="show-page"
+    <div> Artist: <%= concert.artist %> </div>
+    <div> Tour/Album: <%= concert.tour %> </div>
+    <div> Venue: <%= concert.venue %> </div>
+    <div> Location: <%= concert.location %> </div>
+    <div> Venue: <%= concert.date %> </div>
+    <div> Type: <%= concert.concertType %> </div>
 </section>
 
 <br><h2>Review</h2>
@@ -66,8 +60,13 @@
                   <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                     <button id="submit">X</button>
                   </form>
-                  <form action="/reviews/<%= r._id %>?_method=PUT" method = "PUT">
+                  <form action="/reviews/<%= r._id %>/edit?_method=PUT" method = "GET">
                   <button id="edit review">edit review</button>
+
+
+                  <button id="likeButton">Like</button>
+                  <span id="likeCount">0</span>
+                   
                   </form>
                 <% } %>
               </td>

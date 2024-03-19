@@ -7,7 +7,8 @@ require('dotenv').config();
 require('./config/database');
 require('./config/passport');
 var session = require('express-session');
-var passport = require('passport');;
+var passport = require('passport');
+var method = require('method-override');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(method('_method'));
 
 app.use(session({
   secret: process.env.SECRET,
@@ -45,9 +47,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/concerts', concertsRouter);
 app.use('/', reviewsRouter);
-app.get('/about', (req, res) => {
-  res.render('concerts/about');
- });
+
+app.get('/about', (req, res) => {res.render('about', {title : 'about'})});
+app.get('/calendar', (req, res) => {res.render('calendar', {title : 'music calendar'})});
 
 // app.use('/about', aboutRouter)
 // catch 404 and forward to error handler

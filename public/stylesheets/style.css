@@ -25,6 +25,7 @@ nav > img {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
+
 }
 
 nav > a {
@@ -57,8 +58,15 @@ nav > a.active {
 }
 
 #show-page {
-  display: flex;
+  margin: 0 auto;
+  display: grid;
   justify-content: center;
+  border-color: orange;
+  background-color: lightyellow;
+  /* border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%; */
 }
 
 #show-list {
@@ -68,14 +76,9 @@ nav > a.active {
 
 #concert-list {
   display: grid;
-  justify-content: center;
-
-}
-
-#new-concert-form {
-  display: flex;
-  justify-content: center;
-  font-family: 'Courier New', Courier, monospace;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: peachpuff;
 }
 
 #add-review-form {
@@ -101,4 +104,38 @@ nav > a.active {
 
 #welcome-page {
   background-color: yellow;
+  display: flex;
+}
+
+#about-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#concert-headings {
+  display: grid;
+  color: red;
+  justify-content: space-evenly;
+}
+
+#bold-artist {
+  font-weight: bold;
+}
+
+#new-concert-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100px;
+ 
+}
+
+#main-concert-page {
+  border-color: black;
+}
+
+#about-info {
+  display: flex;
+  justify-content: center;
 }
