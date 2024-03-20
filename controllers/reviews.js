@@ -4,8 +4,20 @@ module.exports = {
     delete: deleteReview,
     create,
     edit: editReview,
-    update: updateReview
+    update: updateReview,
+    likeReview
 };
+
+async function likeReview(req, res) {
+    const likeButton = document.getElementById('likeButton');
+    const likeCount = document.getElementById('likeCount');
+    let count = 0;
+
+    likeButton.addEventListener('click', () => {
+        count++;
+        likeCount.innerText = count;
+    })
+}
 
 async function editReview(req, res) {
     console.log("editing");

@@ -3,18 +3,14 @@
 <table id="concert-list">
     <thead id="concert-headings">
         <tr>
-            <th> Artist </th>
-            <th> Tour </th> 
-            <th> Venue </th>
-            <th> Location </th>
-            <th> Date </th>
-            <th> Concert Type </th>
+            <th> your mosaic </th>
         </tr>
     </thead>
     <tbody>
         <% concerts.forEach(function(c) { %>
+           
             <tr>
-                <td id="bold-artist"> <%= c.artist %> </td>
+                <td id="bold-artist">test <%= c.artist %> </td>
                 <td> <%= c.tour %></td>
                 <td> <%= c.venue %></td>
                 <td> <%= c.location %></td>
@@ -22,6 +18,7 @@
                 <td> <%= c.concertType %></td>
                 <td> <a href="/concerts/<%= c._id %>">details</a></td>
             </tr>
+        
             <% }) %>
     </tbody>
 </table>
