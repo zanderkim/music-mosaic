@@ -4,7 +4,8 @@ module.exports = {
     index,
     show,
     new: newConcert,
-    create
+    create,
+    deleteC: deleteConcert
 }
 
 async function index(req, res) {
@@ -29,4 +30,9 @@ async function create(req, res) {
         console.log(err);
         res.render('concerts/new', { errorMsg: err.message});
     }
+}
+
+async function deleteConcert(req, res) {
+    await Concert.findByIdAndDelete(req.params.id)
+    res.redirect(`/concerts`);
 }

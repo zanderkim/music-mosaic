@@ -13,4 +13,6 @@ router.get('/:id', concertsCtrl.show);
 // Before posting and creating new concert log, ensure logged in
 router.post('/', ensureLoggedIn, concertsCtrl.create);
 
+router.delete('/:id', ensureLoggedIn, concertsCtrl.deleteC);
+
 module.exports = router;
