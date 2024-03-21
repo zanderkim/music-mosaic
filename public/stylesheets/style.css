@@ -18,7 +18,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-image: linear-gradient(to top right, yellow, red);
+  background-color:  #1d3979;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -37,11 +37,12 @@ nav > a {
   padding: 10px;
   border-radius: 5px;
   justify-content: center;
+  color: white;
 }
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: green;
+  background-color: #29478d;
 }
 
 nav > a.active {
@@ -63,8 +64,7 @@ nav > a.active {
 /* welcome page */
 #welcome-page {
   margin: 60px;
-  background-image: linear-gradient(to top right, yellow, red);
-  display: flex;
+  display: grid;
 justify-content: center;
  
 }
@@ -77,8 +77,7 @@ justify-content: center;
 }
 
 #full-welcome-page {
-  background-image: linear-gradient(to top right, yellow, red);
-}
+  background-image: linear-gradient(to top right, #ff414e, #ff8928)}
 
 .monoton-font {
   font-family: "Monoton", sans-serif;
@@ -91,46 +90,96 @@ justify-content: center;
   font-family: "Asar", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 /* main page of user concerts */
-
-#main-concert-page {
-  border-radius: 15%;
-  background-image: linear-gradient(to top right, lightyellow, orange);
-  display: flex;
-  margin: 30px;
-  justify-content: space-evenly;
+#purple-background {
+  background-color: #ffde22;
 }
 
-#concert-list {
-  display: grid;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: green;
+#main-concert-page {
+  border-radius: 20%;
+  background-image: linear-gradient(to top right, #ff414e, #ff8928);
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+
 }
 
 #concert-headings {
   display: flex;
-  color: red;
+  justify-content: center;
+  table-layout: auto;
+  width: 100%;
 }
 
+#mosaic-test {
+  font-family: "Monoton";
+  font-size: 40px;
+  justify-content: center;
+}
 
 #concert-list {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: linear-gradient(to bottom, yellow, lightyellow 600px, yellow 1200px);
-  background-size: 1200px 100%;
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
+  display: grid;
+  justify-content: center;
+  font-family: "Monoton";
   border-radius: 10%;
-  margin: 40px;
-  flex-flow: column wrap;
+  margin: 70px;
+  table-layout: auto;
+  width: 100%;
+  font-size: 20px;
 }
+
+/* new concert form page */
+
+#new-concert-form {
+  width: 100%;
+  margin: 30px;
+  table-layout: 100px;
+  display: grid;
+}
+
+#new-form-container {
+  background-image: linear-gradient(to top right, #ff414e, #ff8928);
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+#artist-text {
+  font-size: 14px;
+}
+
+/* concert details page */
 
 #bold-artist {
   font-weight: bold;
+  height: 10px;
+}
+
+#concert-show-background {
+  background-image: radial-gradient(#ff8928,#ff414e);
+
+}
+
+#show-page {
+  margin: 100px;
+  display: grid;
+  justify-content: center;
+  height: 50px;
+  font-size: 20px;
+
+}
+
+#delete-concert {
+  display: flex;
+  color: blue;
+}
+
+#review-table {
+  display: grid;
+  justify-content: center;
 }
 
 #concert-entry {
@@ -138,21 +187,12 @@ justify-content: center;
   background-color: blue;
 }
 
-.text {
-  display: flex;
+#artist-text {
+  background-color: #ffde22;
+  opacity: 80%;
 }
 
-#show-page {
-  margin: 0 auto;
-  display: grid;
-  justify-content: center;
-  border-color: orange;
-  background-color: lightyellow;
-  /* border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%; */
-}
+
 
 #show-list {
   display: flex;

@@ -1,20 +1,23 @@
 <%- include('../partials/header') %>
+
+<container id="purple-background">
 <container id="main-concert-page">
 <table id="concert-list">
     <thead id="concert-headings">
         <tr>
-            <th> your mosaic </th>
+            <th id="mosaic-test"> your mosaic </th>
         </tr>
     </thead>
+    <br>
     <tbody>
         <% concerts.forEach(function(c) { %>
            
             <tr>
-                <td id="bold-artist">test <%= c.artist %> </td>
-                <td> <%= c.tour %></td>
-                <td> <%= c.venue %></td>
+                <td> | <%= c.artist %></td>
+                <td> <%= c.tour %>    <br>     </td>
+                <td> <%= c.venue %>    <br>    </td>
                 <td> <%= c.location %></td>
-                <td> <%= c.date %></td>
+                <td> <%= new Date(c.date).toLocaleDateString('en-US') %> |</td>
                 <td> <%= c.concertType %></td>
                 <td> <a href="/concerts/<%= c._id %>">details</a></td>
             </tr>
@@ -22,6 +25,7 @@
             <% }) %>
     </tbody>
 </table>
+</container>
 </container>
 
 <%- include('../partials/footer') %>

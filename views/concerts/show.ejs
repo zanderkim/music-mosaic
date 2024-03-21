@@ -1,43 +1,48 @@
 <%- include('../partials/header') %>
-
+<container id="concert-show-background">
 <section id="show-page"
-    <div> Artist: <%= concert.artist %> </div>
-    <div> Tour/Album: <%= concert.tour %> </div>
-    <div> Venue: <%= concert.venue %> </div>
-    <div> Location: <%= concert.location %> </div>
-    <div> Venue: <%= concert.date %> </div>
+    <div id="bold-artist"> <%= concert.artist %> </div>
+    <div> tour: <%= concert.tour %> </div>
+    <div> venue: <%= concert.venue %> </div>
+    <div> location: <%= concert.location %> </div>
+    <div> date: <%= new Date(concert.date).toLocaleDateString('en-US') %> </div>
     <div> Type: <%= concert.concertType %> </div>
 </section>
 
-<br><h2>Review</h2>
+
+<br>
+<br>
+<br>
+<br>
 <form id="add-review-form" method="POST"
     action="/concerts/<%= concert._id %>/reviews">
     <label>review:</label>
     <textarea name="content"></textarea>
-    <label>Rating:</label>
+    <label>rating:</label>
     <select name="rating">
+      <option value="0">0</option>
+      <option value="0.5">0.5</option>
       <option value="1">1</option>
+      <option value="1.5">1.5</option>
       <option value="2">2</option>
+      <option value="2.5">2.5</option>
       <option value="3">3</option>
+      <option value="3.5">3.5</option>
       <option value="4">4</option>
+      <option value="4.5">4.5</option>
       <option value="5" selected>5</option>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
-    <ul class="list-inline rating-list">
-      <li><i class="fa fa-star" title="Rate 5"></i></li>
-      <li><i class="fa fa-star" title="Rate 4"></i></li>
-      <li><i class="fa fa-star" title="Rate 3"></i></li>
-      <li><i class="fa fa-star" title="Rate 2"></i></li>
-      <li><i class="fa fa-star" title="Rate 1"></i></li>
-    </ul>
+ 
     <input type="submit" value="add review">
     </form>
     <form action="/concerts/<%= concert._id %>?_method=DELETE" method="POST">
-      <button id="delete concert">delete concert</button>
+      <button id="delete-concert">delete concert</button>
     </form>
 
+    <br>
+    <br>
+
     <% if (concert.reviews.length) { %>
-      <table>
+      <table id="review-table">
         <thead>
           <tr>
             <th>User</th>
@@ -83,5 +88,7 @@
     <% } else { %>
       <h5>no reviews yet</h5>
     <% } %>
+  </container>
+ 
 
 <%- include('../partials/footer') %>

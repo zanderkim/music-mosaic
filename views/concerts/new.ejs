@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-
+<container id="new-form-container">
 <form id="new-concert-form" action="/concerts/" method="POST">
   <label>Artist:</label>
-  <input class="text" name="artist">
+  <input id="artist-text" name="artist">
   <label>Tour:</label>
   <input class="text" name="tour">
   <label>Venue:</label>
@@ -21,7 +21,8 @@
   </select>
   <input type="submit" value="Add Concert">
 </form>
+</container>
 
-<div>test</div>
+
 
 <%- include('../partials/footer') %>
