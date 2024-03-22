@@ -15,7 +15,7 @@ Trello: https://trello.com/b/FaZvm5pa/project-2-zk
  - Add a review to a concert
  - Edit or delete concert review
 
-**Technologies Used:** HTML/CSS, JavaScript, Node, MongoDB, Express, EJS
+**Technologies Used:** HTML/CSS, JavaScript, Node, MongoDB, Express, LucidChart, Heroku, EJS, OAuth, Mongoose.
 
 **Next Steps:**
 - Create a calendar page with popular festivals, tour dates, and artist dates that you can customize.
