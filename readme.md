@@ -2,8 +2,9 @@
 Welcome to Musaic - a place to record your music experiences. You know your own music taste, but who do you actually see live? Whether it's a concert, DJ, speakeasy, or festival, Musaic collects and remembers all of them with you and fellow fans. 
 
 **Screenshots:**
+<img width="731" alt="Screenshot 2024-03-22 at 2 44 34 AM" src="https://github.com/zanderkim/music-mosaic/assets/24398832/71120fa3-aa3e-4738-8599-3f9bb7b0a9d7">
 <img width="731" alt="Screenshot 2024-03-22 at 2 45 28 AM" src="https://github.com/zanderkim/music-mosaic/assets/24398832/ac5e254e-6a0c-4515-87bd-594e078dd462">
-<img width="1241" alt="Screenshot 2024-03-22 at 2 44 34 AM" src="https://github.com/zanderkim/music-mosaic/assets/24398832/71120fa3-aa3e-4738-8599-3f9bb7b0a9d7">
+
 
 **Technologies Used:** HTML/CSS, JavaScript, Node, MongoDB
 
