@@ -1,4 +1,4 @@
- 
+
 /* general / oauth  */
 * {
   box-sizing: flex;
@@ -37,7 +37,7 @@ nav > a {
   padding: 10px;
   border-radius: 5px;
   justify-content: center;
-  color: white;
+  color: #FAF9F6;
 }
 
 nav > a:hover:not(.active) {
@@ -93,6 +93,45 @@ justify-content: center;
   font-size: 14px;
 }
 
+#more-button {
+  font-size: 17px;
+}
+
+.gg-music-speaker {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 22px;
+    border: 20px solid;
+    border-radius: 300px;
+
+.gg-music-speaker::after,
+.gg-music-speaker::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 100px;
+}
+.gg-music-speaker::before {
+    bottom: 2px;
+    width: 8px;
+    height: 8px;
+    left: 2px;
+}
+.gg-music-speaker::after {
+    width: 4px;
+    height: 4px;
+    left: 4px;
+    top: 2px;
+}
+
+}
+
+
 /* main page of user concerts */
 #purple-background {
   background-color: #ffde22;
@@ -125,7 +164,7 @@ justify-content: center;
   justify-content: center;
   font-family: "Monoton";
   border-radius: 10%;
-  margin: 70px;
+  margin: 50px;
   table-layout: auto;
   width: 100%;
   font-size: 20px;
@@ -133,23 +172,38 @@ justify-content: center;
 
 /* new concert form page */
 
+
 #new-concert-form {
-  width: 100%;
-  margin: 30px;
-  table-layout: 100px;
-  display: grid;
+  display: flex;
+  margin: 60px;
+  padding: 3px 7px;
+  line-height: normal;
+  border-radius: 3px;
+  outline: 0;
+  font-size: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Courier New', Courier, monospace;
+  height: 40px;
+
+  :focus{
+      border-color: #e77600;
+      box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+  }
 }
 
 #new-form-container {
   background-image: linear-gradient(to top right, #ff414e, #ff8928);
-  display: flex;
+  display: grid;
   justify-content: flex-start;
-  align-content: flex-start;
+ 
+ 
 }
 
 #artist-text {
   font-size: 14px;
 }
+
 
 /* concert details page */
 
@@ -174,7 +228,10 @@ justify-content: center;
 
 #delete-concert {
   display: flex;
-  color: blue;
+  justify-content: center;
+  background-color:  #ff414e;
+  flex-direction: flex-end;
+ 
 }
 
 #review-table {
@@ -187,29 +244,79 @@ justify-content: center;
   background-color: blue;
 }
 
-#artist-text {
-  background-color: #ffde22;
-  opacity: 80%;
+#center-review {
+  display: flex;
+  justify-content: center;
 }
 
 
+
+
+/* text input field light blue background */
+.add-blue {
+  background-color: #a0d2eb;
+  font-size: 16px;
+}
+
+.add-purple {
+  background-color: #d0bdf4;
+}
+
+
+#about-info {
+ background-image: radial-gradient(#ff8928,#ff414e);
+display: flex;
+}
+
+#about-font {
+  font-family: "Monoton";
+}
+
+/* calendar page */
+
+#calendar-info {
+  background-image: radial-gradient(#ff8928,#ff414e);
+}
+#calendar-font {
+  display: flex;
+  justify-content: center;
+  font-family: "Monoton";
+}
+
+.form-font {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+}
 
 #show-list {
   display: flex;
   justify-content: center;
 }
 
-
-
 #add-review-form {
   display: flex;
+  height: 31px;
+  padding: 3px 7px;
+  line-height: normal;
+  border-radius: 3px;
+  outline: 0;
+  font-size: 12px;
   justify-content: center;
+  flex-wrap: wrap;
+  height: 50px;
+  margin: 40px;
+
+  :focus{
+      border-color: #e77600;
+      box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+  }
 }
 
+#edit-review-container {
+  background-image: radial-gradient(#ff8928,#ff414e);
 
-
-
-
+}
 
 
 #about-info {
@@ -217,27 +324,9 @@ justify-content: center;
   flex-direction: row;
 }
 
-
-
-
-
-#new-concert-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-family: 'Courier New', Courier, monospace;
-  height: 100px;
- 
-}
-
 #about-info {
   display: flex;
   justify-content: center;
 }
-
-
-
-
-
 
 

@@ -5,7 +5,7 @@
 <table id="concert-list">
     <thead id="concert-headings">
         <tr>
-            <th id="mosaic-test"> your mosaic </th>
+            <th id="mosaic-test"> your musaic </th>
         </tr>
     </thead>
     <br>
@@ -13,13 +13,13 @@
         <% concerts.forEach(function(c) { %>
            
             <tr>
-                <td> | <%= c.artist %></td>
-                <td> <%= c.tour %>    <br>     </td>
-                <td> <%= c.venue %>    <br>    </td>
-                <td> <%= c.location %></td>
-                <td> <%= new Date(c.date).toLocaleDateString('en-US') %> |</td>
+                <td> ‣ <%= c.artist %></td>
+                <td> | <%= c.tour %> </td>
+                <td> | <%= c.venue %> </td>
+                <td> @ <%= c.location %></td>
+                <td> | <%= new Date(c.date).toLocaleDateString('en-US') %> </td>
                 <td> <%= c.concertType %></td>
-                <td> <a href="/concerts/<%= c._id %>">details</a></td>
+                <td> ⇾ <a href="/concerts/<%= c._id %>" id="more-button">more</a></td>
             </tr>
         
             <% }) %>

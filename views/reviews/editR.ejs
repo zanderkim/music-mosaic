@@ -1,20 +1,26 @@
 <%- include('../partials/header')%>
-<!-- 
-<h2> hello </h2> -->
-<br><h2>Review</h2>
+
+<container id="edit-review-container">
 <form id="add-review-form" method="POST"
     action="/reviews/<%= reviews.reviews[0].id %>/edit?_method=PUT">
-    <label>review:</label>
-    <textarea name="content" placeholder="<%= reviews.reviews[0].content%>" ></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5" selected>5</option>
+    <label class="form-font">review:</label>
+    <textarea name="content" class="add-blue" placeholder="<%= reviews.reviews[0].content%>" ></textarea>
+    <label class="form-font">rating:</label>
+    <select name="rating" class="add-blue">
+      <option value="0">0 stars</option>
+      <option value="0.5">0.5 star</option>
+      <option value="1">1 star</option>
+      <option value="1.5">1.5 stars</option>
+      <option value="2">2 stars</option>
+      <option value="2.5">2.5 stars</option>
+      <option value="3">3 stars</option>
+      <option value="3.5">3.5 stars</option>
+      <option value="4">4 stars</option>
+      <option value="4.5">4.5 stars</option>
+      <option value="5" selected>5 stars</option>
    
-    <input type="submit" value="add review">
+    <input type="submit" class="add-purple" value="add review">
     </form>
+  </container>
 
 <%- include('../partials/footer')%>

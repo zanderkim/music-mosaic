@@ -1,25 +1,25 @@
 <%- include('../partials/header') %>
 <container id="new-form-container">
 <form id="new-concert-form" action="/concerts/" method="POST">
-  <label>Artist:</label>
-  <input id="artist-text" name="artist">
-  <label>Tour:</label>
-  <input class="text" name="tour">
-  <label>Venue:</label>
-  <input class="text" name="venue">
-  <label>Location:</label>
-  <input class="text" name="location">
-  <label>Date:</label>
-  <input type="date" name="date">
-  <label>Performance Type</label>
-  <select name="performance type">
+  <label class="form-font">artist:</label>
+  <input class="add-blue" name="artist">
+  <label class="form-font">tour:</label>
+  <input class="add-blue" name="tour">
+  <label class="form-font">venue:</label>
+  <input class="add-blue" name="venue">
+  <label class="form-font">location:</label>
+  <input class="add-blue" name="location">
+  <label class="form-font">date:</label>
+  <input type="date" class="add-blue" name="date">
+  <label class="form-font">type:</label>
+  <select class="add-blue" name="performance type">
     <option value="Concert">Concert</option>
     <option value="Festival">Festival</option>
     <option value="Speakeasy">Speakeasy</option>
     <option value="DJ">DJ</option>
     <option value="Special Event">Special Event</option>
   </select>
-  <input type="submit" value="Add Concert">
+  <input type="submit" class="add-purple" value="Add Concert">
 </form>
 </container>
 

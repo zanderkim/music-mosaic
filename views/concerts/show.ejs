@@ -1,12 +1,13 @@
 <%- include('../partials/header') %>
 <container id="concert-show-background">
 <section id="show-page"
-    <div id="bold-artist"> <%= concert.artist %> </div>
-    <div> tour: <%= concert.tour %> </div>
-    <div> venue: <%= concert.venue %> </div>
-    <div> location: <%= concert.location %> </div>
-    <div> date: <%= new Date(concert.date).toLocaleDateString('en-US') %> </div>
-    <div> Type: <%= concert.concertType %> </div>
+    <div>  ‣ <%= concert.artist %> </div>
+    <br> <br>
+    <div>  <%= concert.tour %> </div>
+    <div>  <%= concert.venue %> </div>
+    <div>  <%= concert.location %> </div>
+    <div>  <%= new Date(concert.date).toLocaleDateString('en-US') %> </div>
+    <div>  <%= concert.concertType %> </div>
 </section>
 
 
@@ -17,27 +18,25 @@
 <form id="add-review-form" method="POST"
     action="/concerts/<%= concert._id %>/reviews">
     <label>review:</label>
-    <textarea name="content"></textarea>
+    <textarea name="content" class="add-blue"></textarea>
     <label>rating:</label>
-    <select name="rating">
-      <option value="0">0</option>
-      <option value="0.5">0.5</option>
-      <option value="1">1</option>
-      <option value="1.5">1.5</option>
-      <option value="2">2</option>
-      <option value="2.5">2.5</option>
-      <option value="3">3</option>
-      <option value="3.5">3.5</option>
-      <option value="4">4</option>
-      <option value="4.5">4.5</option>
-      <option value="5" selected>5</option>
- 
-    <input type="submit" value="add review">
-    </form>
-    <form action="/concerts/<%= concert._id %>?_method=DELETE" method="POST">
-      <button id="delete-concert">delete concert</button>
+    <select name="rating" class="add-blue">
+      <option value="0">0 stars</option>
+      <option value="0.5">0.5 star</option>
+      <option value="1">1 star</option>
+      <option value="1.5">1.5 stars</option>
+      <option value="2">2 stars</option>
+      <option value="2.5">2.5 stars</option>
+      <option value="3">3 stars</option>
+      <option value="3.5">3.5 stars</option>
+      <option value="4">4 stars</option>
+      <option value="4.5">4.5 stars</option>
+      <option value="5" selected>5 stars</option>
+
+    <input type="submit" class="add-purple" value="add review">
     </form>
 
+  
     <br>
     <br>
 
@@ -45,12 +44,7 @@
       <table id="review-table">
         <thead>
           <tr>
-            <th>User</th>
-            <th>Date</th>
-            <th>Review</th>
-            <th>Rating</th>
-            <th>Photos</th>
-            <th></th>
+            <th>reviews</th>
           </tr>
         </thead>
         <tbody>
@@ -72,9 +66,7 @@
                   <button id="edit review">edit review</button>
         
                   </form>
-                  <button id="likeButton">Like</button>
-                  <span id="likeCount">0</span>
-                  
+                
                 <% } %>
               </td>
             </tr>
@@ -86,9 +78,16 @@
         </tbody>
       </table>
     <% } else { %>
-      <h5>no reviews yet</h5>
+      <h5 id="center-review">no reviews yet</h5>
+     
     <% } %>
+
+    <form action="/concerts/<%= concert._id %>?_method=DELETE" method="POST">
+      <button id="delete-concert">delete concert</button>
+    </form>
+  
   </container>
+
  
 
 <%- include('../partials/footer') %>
